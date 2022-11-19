@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+a{
+  color: black !important;
+}
+
+.brand-logo,h2{
+  font-family: 'Grand Hotel', cursive;
+}
+.mycard{
+margin-top: 30px ;
+}
+.auth-card{
+  padding:20px ;
+  text-align:center;
+  max-width:400px;
+  margin: 10px auto
+}
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid rgb(23, 60, 184) !important;
+  box-shadow: 0 1px 0 0 rgb(23, 60, 184) !important;
+}
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid rgb(23, 60, 184) !important;
+  box-shadow: 0 1px 0 0 rgb(23, 60, 184) !important;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.item{
+  width:30%;
+}
+
+/* home page styling*/
+
+.home-card{
+  max-width: 300px;
+  height:max-content;
+  margin: 5px auto;
+
+}
+
+
+#toast-container{
+  top:30px !important;
+  right:20px !important;
+  left:auto !important;
+}
+
+/* Main Comp Design */
+
+p{
+  color:#fff ;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+.row
+{
+  display: flex;
+  align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-around ;
+}
+.col-1{
+  flex-basis: 100%;
+  min-width: 600px;
+  
+  }
+.col-1 img{
+  align-items: center;
+  max-width: 100%;
+  padding:30px 0;
+  
+  }
+  .col-2{
+    flex-basis: 50%;
+    min-width: 400px;
+    
+    }
+  .col-1 img{
+    align-items: center;
+    max-width: 50%;
+    padding:30px 0;
+    
+    }
+.col-1 h1{
+  font-size: 130px;
+  line-height: 60px;
+  margin: 45px 0;
+  color:rgb(247, 241, 242);
+    
+}
+.col-1 h2{
+  font-size: 40px;
+  line-height: 60px;
+  margin: 25px 0;
+  color:rgb(231, 58, 58);
+    
+}
+.col-1 form input{
+  width: 70%;
+  height: 170%;
+ line-height: 100%;
+ margin-top: 20px;
+ margin-bottom: 10px;
+ margin-left: 15%;
+ padding: 20px 10px;
+ color:#fff;
+ background-color: #fff;
+
+}
+.col-1 form a{
+  width: 30%;
+  height: 180%;
+ line-height: 1%;
+ margin-bottom: 70px;
+ margin-left: 15%;
+ padding: 20px 10px;
+}    
+
+ center .btn
+{
+  display: inline-block;
+  background: #fffffe;
+  color: rgb(192, 10, 10);
+  padding: 8px  40px;
+  margin: 50px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+.header{
+  background-image: url("./components/Image/food.jpg");
+  filter: brightness(40%);
+  background-repeat: no-repeat;
+  
+  }
+  
+ .col-1 .btn:hover{
+  background: #563434;
+  }

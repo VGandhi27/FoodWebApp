@@ -7,6 +7,8 @@ import SignIn from "./components/screens/SignIn";
 import SignUp from "./components/screens/SignUp";
 import Profile from "./components/screens/Profile";
 import CreatePost from "./components/screens/CreatePost";
+import Product from "./components/screens/Product";
+
 import MainCom from "./components/screens/MainCom";
 import UserProfile from "./components/screens/UserProfile";
 import {useNavigate} from 'react-router-dom'
@@ -42,12 +44,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<><Navbar /><Routing/></>}>
-            <Route index element={<><MainCom/><Home  /></>} />
-            <Route path="home" element={<><MainCom/><Home  /></>} />
+            <Route index element={<><Home  /></>} />
+            <Route path="home" element={<><Home  /></>} />
             <Route path="signin" element={<><MainCom/><SignIn   /></>} />
             <Route path="signup" element={<><MainCom/><SignUp /></>} />
             <Route exact path="profile" element={<><Profile /></>} />
             <Route path="createpost" element={<><CreatePost /></>} />
+            <Route path="product" element={<><Product /></>} />
+
             <Route path="profile/:userid" element={<><UserProfile /></>} />
 
           </Route>

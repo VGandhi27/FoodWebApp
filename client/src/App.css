@@ -38,7 +38,9 @@ margin-top: 30px ;
 .home-card{
   max-width: 300px;
   height:max-content;
-  margin: 5px auto;
+  padding:20px ;
+  text-align:center;
+  margin: 10px auto
 
 }
 
@@ -51,7 +53,7 @@ margin-top: 30px ;
 
 /* Main Comp Design */
 
-p{
+.col-1 p{
   color:#fff ;
 }
 .container{
@@ -84,9 +86,9 @@ p{
     min-width: 400px;
     
     }
-  .col-1 img{
-    align-items: center;
-    max-width: 50%;
+  .col-sm-4 img{
+    align-items: left;
+    max-width: 300px;
     padding:30px 0;
     
     }
@@ -144,4 +146,19 @@ p{
   
  .col-1 .btn:hover{
   background: #563434;
+  }
+
+
+  .cards {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  
+  .cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .containers {
+    padding: 2px 16px;
   }

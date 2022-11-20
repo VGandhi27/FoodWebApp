@@ -14,6 +14,7 @@ const postSchema =new mongoose.Schema({
         required:true
     },
     likes:[{type:ObjectId,ref:"User"}],
+    toCart:[{type:ObjectId,ref:"User"}],
     comments:[{
         text:String,
         postedBy:{type:ObjectId,ref:"User"}

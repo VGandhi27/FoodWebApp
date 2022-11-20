@@ -8,6 +8,9 @@ import SignUp from "./components/screens/SignUp";
 import Profile from "./components/screens/Profile";
 import CreatePost from "./components/screens/CreatePost";
 import Product from "./components/screens/Product";
+import Offer from "./components/screens/Offer";
+import  Cart from "./components/screens/Cart";
+import Footer from "./components/screens/Footer";
 
 import MainCom from "./components/screens/MainCom";
 import UserProfile from "./components/screens/UserProfile";
@@ -44,13 +47,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<><Navbar /><Routing/></>}>
-            <Route index element={<><Home  /></>} />
-            <Route path="home" element={<><Home  /></>} />
+            <Route index element={<><MainCom/><Home  /><Offer /><Footer /></>} />
+            <Route path="home" element={<><MainCom/><Home  /><Offer /><Footer /></>} />
             <Route path="signin" element={<><MainCom/><SignIn   /></>} />
             <Route path="signup" element={<><MainCom/><SignUp /></>} />
             <Route exact path="profile" element={<><Profile /></>} />
             <Route path="createpost" element={<><CreatePost /></>} />
-            <Route path="product" element={<><Product /></>} />
+            <Route path="product" element={<><Product /><Footer /></>} />
+            <Route path="offer" element={<><Offer /></>} />
+            <Route path="Footer" element={<><Footer /></>} />
+            <Route path="Cart" element={<><Cart /></>} />
 
             <Route path="profile/:userid" element={<><UserProfile /></>} />
 

@@ -83,7 +83,7 @@ margin-top: 30px ;
   }
   .col-2{
     flex-basis: 50%;
-    min-width: 400px;
+    min-width: 500px;
     
     }
   .col-sm-4 img{
@@ -162,3 +162,121 @@ margin-top: 30px ;
   .containers {
     padding: 2px 16px;
   }
+  .offer{
+    background: radial-gradient(rgb(255, 255, 255),#ffd6d6);
+   margin-top: 80px;
+   padding: 30px 0;
+   
+  }
+  
+  .footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+  }
+  .footer p{
+    color: #8a8a8a;
+  }
+  .footer h3{
+    color: #fff;
+    margin-bottom:20px;
+  }
+  .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+  }
+  .footer-col-1{
+    flex-basis: 30%;
+  }
+  .footer-col-2{
+    flex: 1;
+    text-align: center;
+  }
+  .footer-col-2 img{
+    width:100px;
+    margin-bottom: 20px;
+  }
+  .footer-col-3,.footer-col-4{
+  flex-basis: 12%;
+  text-align: center;
+  }
+  ul{
+    list-style-type: none ;
+  }
+  .app-logo{
+    margin-top: 20px;
+  }
+  .app-logo img{
+    width: 140px;
+  }
+  .footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+  }
+  .copyright{
+    text-align: center;
+    font-size: large;
+  }
+  .menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display:none;
+  }
+
+
+
+  .cart-page{
+    margin: 80px auto;
+    
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+     font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color:#ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top:3px solid #ff523b  ;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}

@@ -20,7 +20,8 @@ const userSchema = new mongoose.Schema({
      default:"http://res.cloudinary.com/dcyysbj41/image/upload/v1666777119/n5tnxchnqaynj25wrb7n.jpg"
     },
     followers:[{type:ObjectId,ref:"User"}],
-    following:[{type:ObjectId,ref:"User"}]
+    following:[{type:ObjectId,ref:"User"}],
+    addCart:[{type:ObjectId,ref:"User"}]
 })
 
 mongoose.model("User",userSchema)

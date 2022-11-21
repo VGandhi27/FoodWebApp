@@ -48,10 +48,10 @@ const Cart = () => {
                      data.map(item=>{
                         return(
 <div className="cart-info" key={item._id}>
-                           <img src="img/3.jpg" alt=""/>
+                           <img src={item.pics} alt=""/>
                        <div>
                            <p>{item.title}</p>
-                           <small>{item.sbody}</small><br/>
+                           <small>{item.body}</small><br/>
                            <a href="">Remove</a>
                        </div>
                         </div>

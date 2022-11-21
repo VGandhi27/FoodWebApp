@@ -67,6 +67,32 @@ const unlikePost = (id)=>{
     console.log(err)
 })
 }
+const addToCart = (id)=>{
+//   fetch('/addCart',{
+//       method:"put",
+//       headers:{
+//           "Content-Type":"application/json",
+//           "Authorization":"Bearer "+localStorage.getItem('jwt')
+//       },
+//       body:JSON.stringify({
+//           CartId:id
+          
+//       })
+//   }).then(res=>res.json())
+//   .then(res=>res.json())
+//   .then(result=>{
+//     const newData = data.map(item=>{
+//         if(item._id==result._id){
+//             return result
+//         }else{
+//             return item
+//         }
+//     })
+//     setData(newData)
+//   }).catch(err=>{
+//     console.log(err)
+// })
+}
 
 //make a delete post
   return (
@@ -118,8 +144,14 @@ const unlikePost = (id)=>{
                     <p className="card-text">
                     {item.body}
                     </p>
-                    {item.likes.includes(state._id)
+                    <a href="#" className="btn btn-primary btn-sm"
+                    onClick={()=>{addToCart(item._id)}}>
+                      Add to Cart
+                    </a>
+                    
+                    {/* {item.likes.includes(state._id)
           ?
+
           <i className="material-icons"
           onClick={()=>{unlikePost(item._id)}}
          >thumb_down</i>
@@ -129,7 +161,7 @@ const unlikePost = (id)=>{
          onClick={()=>{likePost(item._id)}}
          >thumb_up</i> 
 
-        }
+        } */}
 
                     <a href="#" className="btn btn-primary btn-sm">
                       Price:{item.body}

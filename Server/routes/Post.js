@@ -168,10 +168,11 @@ router.post('/search-posts',(req,res)=>{
 
 router.get('/post/:id',requireLogin,(req,res)=>{
     User.findOne({_id:req.params.id})
-    // .select("-password")
+    .select("-postedBy")
     .then(user=>{
-         Post.find({postedBy:req.params.id})
-         .populate("postedBy","_id title")
+         Post.find({_id:req.params.id})
+         .populate("_id title")
+         .populate("comments","_id body","photo")
          .exec((err,posts)=>{
              if(err){
                  return res.status(422).json({error:err})

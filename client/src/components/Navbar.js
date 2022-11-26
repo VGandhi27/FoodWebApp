@@ -43,22 +43,39 @@ const Navbar=()=> {
     }
   }
   // request
+  // const fetchUsers = (query)=>{
+  //       setSearch(query)
+  //       fetch('/search-users',{
+  //         method:"post",
+  //         headers:{
+  //           "Content-Type":"application/json"
+  //         },
+  //         body:JSON.stringify({
+  //           query
+  //         })
+  //       }).then(res=>res.json())
+  //       .then(results=>{
+  //         console.log(results)
+  //         setUserDetails(results.user)
+  //       })
+  //    }
+
   const fetchUsers = (query)=>{
-        setSearch(query)
-        fetch('/search-users',{
-          method:"post",
-          headers:{
-            "Content-Type":"application/json"
-          },
-          body:JSON.stringify({
-            query
-          })
-        }).then(res=>res.json())
-        .then(results=>{
-          console.log(results)
-          setUserDetails(results.user)
-        })
-     }
+    setSearch(query)
+    fetch('/search-posts',{
+      method:"post",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        query
+      })
+    }).then(res=>res.json())
+    .then(results=>{
+      console.log(results)
+      setUserDetails(results.user)
+    })
+ }     
   return (
     <>
     <nav>
@@ -83,7 +100,7 @@ const Navbar=()=> {
                  return <Link to={item._id !== state._id ? "/profile/"+item._id:'/profile'} onClick={()=>{
                    M.Modal.getInstance(searchModal.current).close()
                    setSearch('')
-                 }}><li className="collection-item">{item.email}</li></Link> 
+                 }}><li className="collection-item">{item.title}</li></Link> 
                })}
                
               </ul>

@@ -137,6 +137,16 @@ margin-top: 30px ;
   border-radius: 30px;
   transition: background 0.5s;
 }
+ .btn1
+{
+  display: inline-block;
+  background: #fffffe;
+  color: rgb(192, 10, 10);
+  padding: 8px  40px;
+  margin: 50px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
 .header{
   background-image: url("./components/Image/food.jpg");
   filter: brightness(40%);
@@ -283,4 +293,11 @@ th:last-child{
 /* Search tool */
 .collection-item{
   width: 100%;
+}
+
+.desc-card{
+  max-width: 600px;
+  height:max-content;
+  margin: 26px auto;
+
 }

@@ -125,17 +125,17 @@ router.put('/comment',requireLogin,(req,res)=>{
     })
 })
 
-router.post('/search-users',(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    Post.find({title:{$regex:userPattern}})
-    .select("_id title")
-    .then(user=>{
-        res.json({user})
-    }).catch(err=>{
-        console.log(err)
-    })
+// router.post('/search-users',(req,res)=>{
+//     let userPattern = new RegExp("^"+req.body.query)
+//     Post.find({title:{$regex:userPattern}})
+//     .select("_id title")
+//     .then(user=>{
+//         res.json({user})
+//     }).catch(err=>{
+//         console.log(err)
+//     })
 
-})
+// })
 
 
 router.delete('/deletepost/:postId',requireLogin,(req,res)=>{

@@ -97,7 +97,7 @@ const Navbar=()=> {
         {/* Collections */}
         <ul className="collection">
                {userDetails.map(item=>{
-                 return <Link to={item._id !== state._id ? "/profile/"+item._id:'/profile'} onClick={()=>{
+                 return <Link to={item._id !== state._id ? "/allpost/"+item.title:"/allpost/"+item.title} onClick={()=>{
                    M.Modal.getInstance(searchModal.current).close()
                    setSearch('')
                  }}><li className="collection-item">{item.title}</li></Link> 

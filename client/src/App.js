@@ -53,7 +53,7 @@ function App() {
             <Route path="signin" element={<><MainCom/><SignIn   /></>} />
             <Route path="signup" element={<><MainCom/><SignUp /></>} />
             <Route exact path="profile" element={<><Profile /></>} />
-            <Route exact path="productdescription/:postid" element={<><ProductDescription /></>} />
+            <Route exact path="allpost/:title" element={<><ProductDescription /></>} />
             <Route path="createpost" element={<><CreatePost /></>} />
             <Route path="product" element={<><Product /><Footer /></>} />
             <Route path="offer" element={<><Offer /></>} />

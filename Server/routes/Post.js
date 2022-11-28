@@ -16,30 +16,6 @@ router.get("/allpost",requireLogin,(req,res)=>{
     })
 })
 
-// router.get('/allposts/:id',requireLogin,(req,res)=>{
-   
-//          Post.findOne({postedBy:req.params.id})
-//          .populate("postedBy","_id title")
-//          .exec((err,posts)=>{
-//              if(err){
-//                  return res.status(422).json({error:err})
-//              }
-//              res.json({posts})
-//          })
-    
-// })
-
-
-// app.get('/api/products/:id', (req, res, next) => {  
-//     Product.findOne({_id: req.params.id })
-//     .then(product => {
-//        console.log(product) //To check the value we got from query
-//        res.status(200).json({product})
-//     })
-//   .catch(err => {
-//      console.log(err)
-//   })
-//   });
 
 router.get("/getsubpost",requireLogin,(req,res)=>{
     Post.find({postedBy:{$in:req.user.following}})
@@ -151,18 +127,6 @@ router.put('/comment',requireLogin,(req,res)=>{
     })
 })
 
-// router.post('/search-users',(req,res)=>{
-//     let userPattern = new RegExp("^"+req.body.query)
-//     Post.find({title:{$regex:userPattern}})
-//     .select("_id title")
-//     .then(user=>{
-//         res.json({user})
-//     }).catch(err=>{
-//         console.log(err)
-//     })
-
-// })
-
 router.post('/search-posts',(req,res)=>{
     let userPattern = new RegExp("^"+req.body.query)
     Post.find({title:{$regex:userPattern}})
@@ -175,67 +139,26 @@ router.post('/search-posts',(req,res)=>{
 
 })
 
-router.post('/allpost/:title',(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    Post.find({title:{$regex:userPattern}})
-    .select("_id title body photo comments")
-    .then(user=>{
-        res.json({user})
+router.get('/products/:id',requireLogin,(req,res)=>{
+    Post.findOne({_id:req.params.id})
+    .then(posting=>{
+         Post.find({postedBy:req.params.id})
+         .populate("postedBy","_id name")
+         .exec((err,posts)=>{
+             if(err){
+                 return res.status(422).json({error:err})
+             }
+             res.json({posting,posts})
+         })
     }).catch(err=>{
-        console.log(err)
+        return res.status(404).json({error:"User not found"})
     })
-
 })
 
 
-// router.get('/user/:id',requireLogin,(req,res)=>{
-//     User.findOne({_id:req.params.id})
-//     .select("-password")
-//     .then(user=>{
-//          Post.find({postedBy:req.params.id})
-//          .populate("postedBy","_id name")
-//          .exec((err,posts)=>{
-//              if(err){
-//                  return res.status(422).json({error:err})
-//              }
-//              res.json({user,posts})
-//          })
-//     }).catch(err=>{
-//         return res.status(404).json({error:"User not found"})
-//     })
-// })
-
-// router.get('/post/:postId',requireLogin,(req,res)=>{
-//     Post.findOne({_id:req.params.postId})
-//     .select("-postedBy")
-//     .then(user=>{
-//          Post.find({_id:req.params.postId})
-//          .populate("_id title")
-//          .exec((err,posts)=>{
-//              if(err){
-//                 console.log(posts);
-//                  return res.status(422).json({error:err})
-//              }
-//              res.json({user,posts})
-//          })
-//     }).catch(err=>{
-//         return res.status(404).json({error:"Post not found"})
-//     })
-// })
 
 
-  
-router.get('/post/:postId',requireLogin,(req,res)=>{
-    Post.findOne({_id:req.params.postId})
-    .populate("title","_id")
-    .then(posts=>{
-        res.json({posts})
-    })
-    .catch(err=>{
-        console.log(err)
-    })
-   
-})
+
 router.delete('/deletepost/:postId',requireLogin,(req,res)=>{
     Post.findOne({_id:req.params.postId})
     .populate("postedBy","_id")

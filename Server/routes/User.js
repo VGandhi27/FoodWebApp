@@ -92,27 +92,41 @@ router.post('/search-users',(req,res)=>{
 
 })
 
+// router.put('/addCart',requireLogin,(req,res)=>{
+//     User.findByIdAndUpdate(req.body.objectId,{
+//         $push:{addcart:req.user._id}
+//     },{
+//         new:true
+//     },(err,result)=>{
+//         if(err){
+//             return res.status(422).json({error:err})
+//         }
+//       User.findByIdAndUpdate(req.user._id,{
+//           $push:{addCart:req.body.objectId}
+          
+//       },{new:true}).select("-password").then(result=>{
+//           res.json(result)
+//       }).catch(err=>{
+//           return res.status(422).json({error:err})
+//       })
+
+//     }
+//     )
+// })
+
 router.put('/addCart',requireLogin,(req,res)=>{
-    User.findByIdAndUpdate(req.body.objectId,{
-        $push:{addcart:req.user._id}
+    User.findByIdAndUpdate(req.body.userId,{
+        $push:{addCart:req.post._id}
     },{
         new:true
-    },(err,result)=>{
+    }).exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})
+        }else{
+            res.json(result)
+            console.log(result)
         }
-      User.findByIdAndUpdate(req.user._id,{
-          $push:{addCart:req.body.objectId}
-          
-      },{new:true}).select("-password").then(result=>{
-          res.json(result)
-      }).catch(err=>{
-          return res.status(422).json({error:err})
-      })
-
-    }
-    )
-})
-
+    })
+  })
 
 module.exports = router

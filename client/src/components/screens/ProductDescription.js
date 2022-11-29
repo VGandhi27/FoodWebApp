@@ -20,6 +20,32 @@ const ProductDescription  = ()=>{
        })
     },[])
 
+    const AddToCart = (id)=>{
+      fetch('/addCart',{
+          method:"put",
+          headers:{
+              "Content-Type":"application/json",
+              "Authorization":"Bearer "+localStorage.getItem("jwt")
+          },
+          body:JSON.stringify({
+              userId:id
+          })
+      }).then(res=>res.json())
+      .then(result=>{
+                 console.log(result)
+        const newData = PostDesc.map(item=>{
+            if(item._id==result._id){
+                return result
+            }else{
+                return item
+            }
+        })
+        setPostDesc(newData)
+      }).catch(err=>{
+          console.log(err)
+      })
+  }
+
   return (
     <>
      {PostDesc?   
@@ -33,7 +59,8 @@ const ProductDescription  = ()=>{
        <i className="material-icons" style={{color:'red'}}>favorite</i>
         <h2>{PostDesc.title}</h2>
         <h3> &#8377; {PostDesc.body}</h3>
-        <button class="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action">Add to Cart
+        <button class="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
+       onClick={()=>{AddToCart(PostDesc._id)}}>Add to Cart
     <i class="material-icons right">add_shopping_cart</i>
     </button>
         <input type="text" placeholder='add a comment' />

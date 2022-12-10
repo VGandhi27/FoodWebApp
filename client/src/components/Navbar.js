@@ -90,7 +90,7 @@ const Navbar=()=> {
     <div id="modal1" className="modal" ref={searchModal} style={{color:"black"}}>
     <div className="modal-content">
      
-   <input type="text" placeholder="search users "
+   <input type="text" placeholder="search food "
          value={search}
          onChange={(e)=>fetchUsers(e.target.value)} />
         

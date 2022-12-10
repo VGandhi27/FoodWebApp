@@ -52,9 +52,10 @@ const ProductDescription  = ()=>{
     //  <h2>Happy</h2>
     <div className="productDescription">
     <div className="card desc-card">
+        <center>
       <div className="card-image">
         <img src={PostDesc.photo} alt="" style={{height:"300px", width:"500px"}}/>
-      </div>
+      </div></center>
        <div className="card-content">
        <i className="material-icons" style={{color:'red'}}>favorite</i>
         <h2>{PostDesc.title}</h2>

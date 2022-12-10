@@ -97,83 +97,45 @@ const addToCart = (id)=>{
 //make a delete post
   return (
     <>
-    {/* <div className="main">
-      <div className="container ">
-        <div className="row">
-          <div className="col-3">
-
-          
-       {
-       data.map(item=>{
-          return(
-            <div className='home left-align'>
-            <div className="card home-card small " key={item._id}>
-            
-         <div className="card-image">
-           <img src={item.photo} alt="" />
-         </div>
-          <div className="card-content">
-          
-           <h6>{item.title}</h6>
-           <p>{item.body}</p>
-                    </div>
-         </div>
-         </div>
-          )
-        })
-       }
-       
-     
-
- 
-   
+   {data?
+    <div className="container">
+    <div className="row">
+  {
+  data.map(item=>{
+      return(
+        
+          <div className="col s12 m4" key={item._id}>
+          <div className="card small" 
+          // style={{ width: "15rem;" }}
+          >
+            <img src={item.photo} className="card-img-top" alt="..." 
+           style={{height:"150px", width:"200px"}}
+             /> 
+             
+            <div className="card-body"><center>
+              <h6 className="card-title">{item.title}</h6>
+              
+              <br />
+              </center>
+              <a href="#" className="btn btn-orange darken-4 btn-small " >
+                Price: &#8377; {item.body}
+              </a>
+             
+            </div>
+           
           </div>
         </div>
-      </div>
-    </div>
-    */}
-          <div className="container">
-        <div className="row">{
-        data.map(item=>{
-            return(
-                <div className="col-sm-3" key={item._id}>
-                <div className="card" style={{ width: "15rem;" }}>
-                  <img src={item.photo} className="card-img-top" alt="..." style={{width:"100px;"}} />
-                  <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">
-                    {item.body}
-                    </p>
-                    <a href="#" className="btn btn-primary btn-sm"
-                    onClick={()=>{addToCart(item._id)}}>
-                      Add to Cart
-                    </a>
-                    
-                    {/* {item.likes.includes(state._id)
-          ?
+                   )
+  })
+}
+</div>
 
-          <i className="material-icons"
-          onClick={()=>{unlikePost(item._id)}}
-         >thumb_down</i>
-         :
+</div>
+: <h2>Loading....!</h2>
 
-         <i className="material-icons"
-         onClick={()=>{likePost(item._id)}}
-         >thumb_up</i> 
-
-        } */}
-
-                    <a href="#" className="btn btn-primary btn-sm">
-                      Price:{item.body}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )
-        })
-    }
-        </div>
-      </div>
+   }
+         
+   
    
     </>
   )

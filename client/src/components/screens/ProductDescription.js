@@ -6,6 +6,7 @@ const ProductDescription  = ()=>{
     const [PostDesc,setPostDesc] = useState([])
     const {state,dispatch} = useContext(UserContext)
     const {postid}=useParams()
+    // console.log(userid)
     console.log(postid)
     useEffect(()=>{
        fetch(`/products/${postid}`,{
@@ -30,22 +31,20 @@ const ProductDescription  = ()=>{
           body:JSON.stringify({
               userId:id
           })
-      }).then(res=>res.json())
+       })
+      .then(res=>res.json())
       .then(result=>{
                  console.log(result)
-        const newData = PostDesc.map(item=>{
-            if(item._id==result._id){
-                return result
-            }else{
-                return item
-            }
-        })
-        setPostDesc(newData)
-      }).catch(err=>{
-          console.log(err)
+        // const newData = PostDesc.map(item=>{
+        //     if(item._id===result._id){
+        //         return result
+        //     }else{
+        //         return item
+        //     }
+        // })
+        // setPostDesc(newData)
       })
-  }
-
+    }
   return (
     <>
      {PostDesc?   
@@ -60,9 +59,9 @@ const ProductDescription  = ()=>{
        <i className="material-icons" style={{color:'red'}}>favorite</i>
         <h2>{PostDesc.title}</h2>
         <h3> &#8377; {PostDesc.body}</h3>
-        <button class="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
+        <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
        onClick={()=>{AddToCart(PostDesc._id)}}>Add to Cart
-    <i class="material-icons right">add_shopping_cart</i>
+    <i className="material-icons right">add_shopping_cart</i>
     </button>
         <input type="text" placeholder='add a comment' />
        </div>

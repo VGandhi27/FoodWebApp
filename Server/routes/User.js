@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const requireLogin  = require('../middleware/requireLogin')
+const cart  = require('../middleware/cart')
 const Post =  mongoose.model("Post")
 const User = mongoose.model("User")
 
@@ -80,53 +81,49 @@ router.put('/updatepic',requireLogin,(req,res)=>{
 
 
 
-router.post('/search-users',(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    User.find({email:{$regex:userPattern}})
-    .select("_id email")
-    .then(user=>{
-        res.json({user})
-    }).catch(err=>{
-        console.log(err)
-    })
+// router.post('/search-users',(req,res)=>{
+//     let userPattern = new RegExp("^"+req.body.query)
+//     User.find({email:{$regex:userPattern}})
+//     .select("_id email")
+//     .then(user=>{
+//         res.json({user})
+//     }).catch(err=>{
+//         console.log(err)
+//     })
 
-})
-
-// router.put('/addCart',requireLogin,(req,res)=>{
-//     User.findByIdAndUpdate(req.body.objectId,{
-//         $push:{addcart:req.user._id}
-//     },{
-//         new:true
-//     },(err,result)=>{
-//         if(err){
-//             return res.status(422).json({error:err})
-//         }
-//       User.findByIdAndUpdate(req.user._id,{
-//           $push:{addCart:req.body.objectId}
-          
-//       },{new:true}).select("-password").then(result=>{
-//           res.json(result)
-//       }).catch(err=>{
-//           return res.status(422).json({error:err})
-//       })
-
-//     }
-//     )
 // })
 
-router.put('/addCart',requireLogin,(req,res)=>{
+router.put('/addCart',requireLogin,cart,(req,res)=>{
     User.findByIdAndUpdate(req.body.userId,{
-        $push:{addCart:req.post._id}
+        $push:{addCart:req.Post._id}
+    },{
+        new:true
+    }).exec((err,result)=>{
+        if(err){
+            return res.status(422).json('not working')
+        }else{
+            //  
+            console.log('result')
+        }
+    })
+  })
+router.put('/removeCart',requireLogin,(req,res)=>{
+    User.findByIdAndUpdate(req.body.userId,{
+       
+        $pull:{addCart:req.post._id}
+        
     },{
         new:true
     }).exec((err,result)=>{
         if(err){
             return res.status(422).json({error:err})
         }else{
-            res.json(result)
+            //  
             console.log(result)
         }
     })
   })
+
+
 
 module.exports = router

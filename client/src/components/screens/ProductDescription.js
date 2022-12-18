@@ -93,15 +93,15 @@ const unlikePost = (id)=>{
        
         {/* PostDesc.likes.includes(state._id) */}
     {PostDesc.likes
-                            ? 
-                            // <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
-                            // onClick={()=>{unlikePost(PostDesc._id)}}>Remove from Cart
-                            //    <i className="material-icons right">remove_shopping_cart</i>
-                            // </button>   
+                            ? <>
+                            <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
+                            onClick={()=>{unlikePost(PostDesc._id)}}>Remove from Cart
+                               <i className="material-icons right">remove_shopping_cart</i>
+                            </button>    
                             <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
                             onClick={()=>{likePost(PostDesc._id)}}>Add to Cart
                                 <i className="material-icons right">add_shopping_cart</i>
-                             </button>                  
+                             </button>    </>              
                             : 
                             <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
                             onClick={()=>{likePost(PostDesc._id)}}>Add to Cart

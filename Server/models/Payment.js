@@ -1,22 +1,17 @@
 const mongoose=require('mongoose')
 const {ObjectId}=mongoose.Schema.Types
-const cartSchema =new mongoose.Schema({
-    addCart:[{type:ObjectId,ref:"Post"}],
-    address:{
+const paymentSchema =new mongoose.Schema({
+    cardno:{
         type:String,
         required:true
     },
-    sector:{
+    time:{
         type:String,
         required:true
     },
-    city:{
-        type:String,
-        required:true
-    },
-    phonenumber:{
+    cv:{
         type:Integer,
         required:true
     }
 })
-mongoose.model("Cart",cartSchema)
+mongoose.model("Payment",paymentSchema)

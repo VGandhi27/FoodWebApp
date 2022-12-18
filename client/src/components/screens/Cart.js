@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState,useEffect,useContext}from 'react'
 import {UserContext} from '../../App'
+import {Link} from 'react-router-dom'
+
 import M from 'materialize-css'
 
 const Cart = () => {
@@ -46,7 +48,7 @@ const Cart = () => {
           console.log(err)
       })
   }
-      
+ 
      
 
   return (
@@ -111,9 +113,9 @@ const Cart = () => {
               
            </div>
            
-           <main><button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
-                         >Check Out
-            </button></main>
+           <main> <Link to="/shippinginfo">
+           <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action"  >
+           Check Out    </button></Link></main>
            
        </div> 
 

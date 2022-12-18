@@ -87,13 +87,14 @@ const Cart = () => {
           
            
           <div className="total-price">
-          {
-                     data.map(item=>{
-                        return(
-               <table >
+     <table >
                    <tr>
                        <td>Subtotal</td>
-                       <td>&#8377;{item.body} </td>
+                       <td> 
+                       {`₹${data.reduce(
+                  (acc, item) => acc + parseInt(item.body) ,
+                  0
+                )}`}</td>
                    </tr>
                    <tr>
                     <td>Tax</td>
@@ -101,11 +102,12 @@ const Cart = () => {
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>&#8377;{item.body} </td>
+                    <td>{`₹${data.reduce(
+                  (acc, item) => acc + parseInt(item.body)+30 ,
+                  0
+                )}`} </td>
                 </tr>
-               </table>)
-                     })
-                    }
+               </table>
               
            </div>
            

@@ -9,7 +9,7 @@ const ShippingInfo = () => {
       const [phonenumber,setPhonenumber] = useState("")
       const [city,setCity] = useState("")
       const [image,setImage] = useState("")
-      const [url,setUrl] = useState("")
+      const [data,setData] = useState("")
     //   useEffect(()=>{
     //     if(url){
     //      fetch("/shipping",{
@@ -61,32 +61,36 @@ const ShippingInfo = () => {
     // }
 
     const PostData =()=>{
+      M.toast({html: data.message, classes:"#43a047 green darken-1"})
+      navigate("/payment");
       // if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
       //  M.toast({html: "Invalid Email", classes:"#d32f2f red darken-2"})
       //  return
       // }  
-      fetch("http://localhost:3000/shippinginfo",{
-        method:"post",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          address,
-          sector,
-          city,
-          phoneno:phonenumber
-        })
-      }).then(res=>res.json())
-      .then(data=>{
-       if(data.error){
-        M.toast({html: data.error, classes:"#d32f2f red darken-2"})
-        }else{
-        M.toast({html: data.message, classes:"#43a047 green darken-1"})
-        navigate("/payment");
-      }
-      }).catch(err=>{
-        console.log(err) 
-      })
+      // fetch("http://localhost:3000/shippinginfo",{
+      //   method:"post",
+      //   headers:{
+      //     "Content-Type":"application/json"
+      //   },
+      //   body:JSON.stringify({
+      //     address,
+      //     sector,
+      //     city,
+      //     phoneno:phonenumber
+      //   })
+      // }).then(res=>res.json())
+      // .then(data=>{
+      //  if(data.error){
+      //   // M.toast({html: data.error, classes:"#d32f2f red darken-2"})
+      //   M.toast({html: data.message, classes:"#43a047 green darken-1"})
+      //   navigate("/payment");
+      // }else{
+      //   M.toast({html: data.message, classes:"#43a047 green darken-1"})
+      //   navigate("/payment");
+      // }
+      // }).catch(err=>{
+      //   console.log(err) 
+      // })
     
     }
     

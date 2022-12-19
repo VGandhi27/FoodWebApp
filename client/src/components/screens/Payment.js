@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import M from 'materialize-css'
 
 const Payment = () => {
     const [cardno,setCardno] = useState("")
@@ -24,7 +25,8 @@ const Payment = () => {
          onChange={(e)=>setCv(e.target.value)}/>
         
         <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
-        // onClick={()=>PostData()}
+        onClick={ M.toast({html:"Payment Accepted and Order Placed",classes:"#43a047 green darken-1"})
+      }
         >Submit
         </button>
         {/* <h5><Link to="/signin">Already have an Account ?</Link></h5> */}

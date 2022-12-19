@@ -1,6 +1,7 @@
 import React from "react";
 import {useState,useEffect,useContext}from 'react'
 import {UserContext} from '../../App'
+import { Link} from 'react-router-dom'
 
 const Product = () => {
     const [data,setData]=useState([])
@@ -28,14 +29,15 @@ const Product = () => {
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">
-                    {item.body}
+                    &#8377; {item.body}
                     </p>
-                    <a href="#" className="btn btn-primary btn-sm mx-2">
-                      Add to Cart
-                    </a>
-                    <a href="#" className="btn btn-primary btn-sm">
+                    <Link to={ "/productdescription/"+item._id} >
+          <button className="btn waves-effect #e65100 orange darken-4 btn-small" type="submit" name="action">More Details
+             </button>
+          </Link>
+                    {/* <a href="#" className="btn btn-primary btn-sm">
                       Price:{item.body}
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

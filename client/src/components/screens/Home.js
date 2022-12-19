@@ -117,9 +117,10 @@ const addToCart = (id)=>{
               
               <br />
               </center>
-              <a href="#" className="btn btn-orange darken-4 btn-small " >
-                Price: &#8377; {item.body}
-              </a>
+              <Link to={ "/productdescription/"+item._id} >
+          <button className="btn waves-effect #e65100 orange darken-4 btn-medium" type="submit" name="action">More Details
+             </button>
+          </Link>
              
             </div>
            

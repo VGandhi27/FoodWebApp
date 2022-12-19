@@ -6,10 +6,6 @@ const {MONGOURI}=require("./Key")
 
 
 
-
-
-
-
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
     useUnifiedTopology:true

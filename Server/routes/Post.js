@@ -30,14 +30,15 @@ router.get("/getsubpost",requireLogin,(req,res)=>{
 })
 
 router.post('/createpost',requireLogin,(req,res)=>{
-    const {title,body} = req.body 
-    if(!title || !body){
+    const {title,body,pic} = req.body 
+    if(!title || !body || !pic){
       return  res.status(422).json({error:"Plase add all the fields"})
     }
     req.user.password = undefined
     const post = new Post({
         title,
         body,
+        photo:pic,
         postedBy:req.user
     })
     post.save().then(result=>{
@@ -48,7 +49,6 @@ router.post('/createpost',requireLogin,(req,res)=>{
     })
 })
 
-
 router.get("/mypost",requireLogin,(req,res)=>{
     Post.find({likes:req.user._id})
     .populate("postedBy","_id name")
@@ -56,7 +56,7 @@ router.get("/mypost",requireLogin,(req,res)=>{
  
     .then(mypost=>{
         res.json({mypost})
-        console.log({myposts})
+        console.log({mypost})
     })
     .catch(err=>{
         console.log(err)

@@ -8,6 +8,11 @@ import {useNavigate} from 'react-router-dom'
 const [name, setName] = useState("")
 const [password, setPassword] = useState("")
 const [email, setEmail] = useState("")
+const [address,setAddress] = useState("")
+      const [sector,setSector] = useState("")
+      const [phoneno,setPhoneno] = useState("")
+      const [city,setCity] = useState("")
+
 let navigate =useNavigate();
 
 const PostData =()=>{
@@ -23,7 +28,12 @@ const PostData =()=>{
     body:JSON.stringify({
       name,
       password,
-      email
+      email,
+      address,
+      sector,
+      city,
+      phoneno,
+          
     })
   }).then(res=>res.json())
   .then(data=>{
@@ -56,6 +66,23 @@ const PostData =()=>{
         <input type="password" placeholder="password"
          value={password}
          onChange={(e)=>setPassword(e.target.value)} />
+
+        <input type="text" placeholder="Address"
+        value={address}
+        onChange={(e)=>setAddress(e.target.value)} />
+
+        <input type="text" placeholder="sector" 
+         value={sector}
+         onChange={(e)=>setSector(e.target.value)}/>
+
+        <input type="text" placeholder="city"
+         value={city}
+         onChange={(e)=>setCity(e.target.value)}/>
+        <input type="number" placeholder="Phone Number"
+         value={phoneno}
+         onChange={(e)=>setPhoneno(e.target.value)}
+         />
+        
         <button className="btn waves-effect waves-light #64b5f6 blue darken-1"
         onClick={()=>PostData()}
         >SignUp

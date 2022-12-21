@@ -40,6 +40,15 @@ const Profile  = ()=>{
                  </div>
       </div>
     </div>
+    <div>
+        <h4>{state?state.name:"loading"}</h4>
+        <h5>{state?state.email:"loading"}</h5>
+        <div style={{display:"flex", justifyContent:"space-between" ,width:"108%"}}>
+          <h5>{mypics.length} items Added to Cart</h5>
+                 </div>
+      </div>
+
+            
     
     <div className='gallery'>
       <h3>Items Added to Cart</h3>
@@ -47,13 +56,13 @@ const Profile  = ()=>{
         mypics.map(item=>{
           return(
             <>
-<div class="row">
-    <div class="col s12">
-      <div class="card medium">
-        <div class="card-image">
+<div className="row">
+    <div className="col s12">
+      <div className="card medium" key={ item._id}>
+        <div className="card-image">
         <img key={ item._id}className='item' src={item.photo} alt={item.title} />
         </div>
-        <div class="card-title">
+        <div className="card-title">
           <h4>{item.title}</h4>
           <h5>Price:&#8377;{item.body}</h5>
           <Link to={ "/productdescription/"+item._id} >

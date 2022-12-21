@@ -43,7 +43,7 @@ const Cart = () => {
           })
           setData(newData)
           console.log(data)
-          M.toast({html: "Remove from Cart", classes:"#43a047 green darken-1"})
+          M.toast({html: "Remove from Cart", className:"#43a047 green darken-1"})
         }).catch(err=>{
           console.log(err)
       })
@@ -113,11 +113,23 @@ const Cart = () => {
               
            </div>
            
-           <main> <Link to="/shippinginfo">
-           <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action"  >
-           Check Out    </button></Link></main>
            
-       </div> 
+           <button className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action" 
+          onClick={()=>{
+            M.toast({html: 'Order Placed , Cash on Delivery'})
+          }}>
+          {/* onClick={M.toast({html: 'Order Placed , Cash on Delivery'})} */}
+           
+           Check Out    </button>
+          
+  {/* <main> 
+           <button  className="btn waves-effect #e65100 orange darken-4 btn-large" type="submit" name="action"  >
+           Check Out    </button> </main>
+           
+ 
+       */}
+           
+      </div> 
 
     
     </>

@@ -10,8 +10,8 @@ const { JWT_SECRET }=require("../Key")
 
 
 router.post('/signup',(req,res)=>{
-   const {name,email,password}=req.body
-   if(!email||!password||!name){
+   const {name,email,password,address,sector,city,phoneno}=req.body
+   if(!email||!password||!name||!address ||!sector||!city||!phoneno){ 
      return res.status(422).json({error:"Please add all the Credential"})
    }
  User.findOne({email:email})
@@ -26,7 +26,8 @@ router.post('/signup',(req,res)=>{
         const user=new User({
             email,
             password:hashedpassword,
-            name
+            name,
+            address,sector,city,phoneno
         })
         user.save()
         .then(user=>{

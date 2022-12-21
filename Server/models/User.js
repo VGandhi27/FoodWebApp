@@ -21,7 +21,23 @@ const userSchema = new mongoose.Schema({
     },
     followers:[{type:ObjectId,ref:"User"}],
     following:[{type:ObjectId,ref:"User"}],
-    addCart:[{type:ObjectId,ref:"Post"}]
+    addCart:[{type:ObjectId,ref:"Post"}],
+    address:{
+        type:String,
+        required:true
+    },
+    sector:{
+        type:String,
+        required:true 
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    phoneno:{
+        type:String,
+        required:true
+    }
 })
 
 mongoose.model("User",userSchema)

@@ -1,8 +1,62 @@
-# Getting Started with Food Web App/Food Ordering App
+# <p align="center">Food Ordering WebApp</p>
 
-# Getting Started with Create React App
+## Table of Contents
+- [General Info](#general_info)
+- [Features to implement in future](#features_for_future)
+- [Tech Stack Used](#tech)
+- [Prerequisites to run the project](#prerequisites)
+- [Steps to run the project](#steps)
+- [Live Project](#live)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## <p id="general_info">General Info</p>
+The main aim of the project is to develop a web-based application that is going to make it possible for the customer to place an order of food by using this app .
+
+In this we are also creating food recommendation app and that will substitute the manual system of the placing an order  with an automated one.
+
+There is a separate module where each task that was identified as necessary in order to successfully develop the Food Web App or Food Ordering WebApp is presented and described in detail
+- This project aims to create two interfaces that is Customer, Admin
+- User Interface- Used to create an interface where the Customer can place orders, review etc
+- Admin Interface- Used to create an interface where the Admin can add the food products,modify it,delete the food product
+- It also provide good authentication so that the legitimate user can use this app
+- Backend using Mongodb
+
+At present, only the frontend and Backend of the website has been developed, which consists of the landing page,sign-in and sign-up and cart and product description page.
+
+## <p id="features_for_future">Features to implement in future:</p>
+- Recommendation System using UnSupervised Learning
+- Payment Gateway to be established.
+- GPS tracking need to be done.
+- Google ,Facebook OAuthentication 
+
+## <p id="tech">Tech Stack Used:</p>
+- HTML
+- CSS
+- Mongodb
+- JavaScript
+- Jquery
+- ReactJs
+- ExpressJs
+- NodeJs
+
+## <p id="prerequisites">Prerequisite to run the project in your desktop</p>
+It is recommended that your laptop should have the following specifications in order to run this project:
+- NodeJs
+- npm 
+- Visual Studio Code (or any other IDE)
+- git
+
+## <p id="steps">Steps to run the project:</p>
+1. Clone the project using git clone command in terminal
+   - ```git clone https://github.com/VGandhi27/FoodWebApp.git ```
+2. Open the FoodWebApp folder in Visual Studio Code (or any other IDE)
+3. In the terminal section of the Visual Studio Code run the following command 
+   - ```npm i``` - It will install all the node modules/libraries to run this WebApp 
+4. Now run the following command
+   - ``` cd server npm start``` - It will start the server
+   - ``` cd client npm start``` - It will host the project in to a local server
+## <p id="live">Live Project link</p>
+[https://goodnessfood.netlify.app](https://goodnessfood.netlify.app/)
+
 
 ## Available Scripts
 

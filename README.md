@@ -7,6 +7,7 @@
 - [Prerequisites to run the project](#prerequisites)
 - [Steps to run the project](#steps)
 - [Live Project](#live)
+- [Contact](#contact)
 
 ## <p id="general_info">General Info</p>
 The main aim of the project is to develop a web-based application that is going to make it possible for the customer to place an order of food by using this app .
@@ -20,7 +21,7 @@ There is a separate module where each task that was identified as necessary in o
 - It also provide good authentication so that the legitimate user can use this app
 - Backend using Mongodb
 
-At present, only the frontend and Backend of the website has been developed, which consists of the landing page,sign-in and sign-up and cart and product description page.
+At present, only the frontend and Backend of the website has been developed, which consists of the landing page,sign-in and sign-up and profile and cart and product description page.
 
 ## <p id="features_for_future">Features to implement in future:</p>
 - Recommendation System using UnSupervised Learning
@@ -29,14 +30,23 @@ At present, only the frontend and Backend of the website has been developed, whi
 - Google ,Facebook OAuthentication 
 
 ## <p id="tech">Tech Stack Used:</p>
-- HTML
-- CSS
-- Mongodb
-- JavaScript
-- Jquery
-- ReactJs
-- ExpressJs
-- NodeJs
+**Frontend:**
+
+![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)&nbsp;
+![react-router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)&nbsp;
+![redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)&nbsp;
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)&nbsp;
+![mui](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)&nbsp;
+
+**Backend:**
+
+![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
+![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)&nbsp;
+![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
+![jwt](	https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)&nbsp;
+
+**Cloud Storage:** [Cloudinary](https://cloudinary.com/) 
+
 
 ## <p id="prerequisites">Prerequisite to run the project in your desktop</p>
 It is recommended that your laptop should have the following specifications in order to run this project:
@@ -56,6 +66,14 @@ It is recommended that your laptop should have the following specifications in o
    - ``` cd client npm start``` - It will host the project in to a local server
 ## <p id="live">Live Project link</p>
 [https://goodnessfood.netlify.app](https://goodnessfood.netlify.app/)
+
+
+## <p id="contact">📬 Contact</p>
+If you want to contact me, you can reach me through below handles.
+
+&nbsp; [![Linkedin Badge](https://img.shields.io/badge/-vidushi_gandhi-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vidushi-gandhi27/)  <a href="https://www.instagram.com/vgandhi72/"><img src="https://img.shields.io/badge/-@vgandhi72-E4405F?style=flat&logo=Instagram&logoColor=white"/></a> &nbsp;
+
+### Show some ❤️ by starring this repository!
 
 
 ## Available Scripts

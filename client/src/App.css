@@ -1,303 +1,297 @@
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 
-a{
+a {
   color: black !important;
 }
 
-.brand-logo,h2{
-  font-family: 'Grand Hotel', cursive;
+.brand-logo,
+h2 {
+  font-family: "Grand Hotel", cursive;
 }
-.mycard{
-margin-top: 30px ;
+.mycard {
+  margin-top: 30px;
 }
-.auth-card{
-  padding:20px ;
-  text-align:center;
-  max-width:400px;
-  margin: 10px auto
+.auth-card {
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
 }
-.input-field input[type=text]:focus {
+.input-field input[type="text"]:focus {
   border-bottom: 1px solid rgb(23, 60, 184) !important;
   box-shadow: 0 1px 0 0 rgb(23, 60, 184) !important;
 }
-.input-field input[type=password]:focus {
+.input-field input[type="password"]:focus {
   border-bottom: 1px solid rgb(23, 60, 184) !important;
   box-shadow: 0 1px 0 0 rgb(23, 60, 184) !important;
 }
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.item{
-  width:30%;
+.item {
+  width: 30%;
 }
 
 /* home page styling*/
 
-.home-card{
+.home-card {
   max-width: 300px;
-  height:max-content;
-  padding:20px ;
-  text-align:center;
-  margin: 10px auto
-
+  height: max-content;
+  padding: 20px;
+  text-align: center;
+  margin: 10px auto;
 }
 
-
-#toast-container{
-  top:30px !important;
-  right:20px !important;
-  left:auto !important;
+#toast-container {
+  top: 30px !important;
+  right: 20px !important;
+  left: auto !important;
 }
 
 /* Main Comp Design */
 
-.col-1 p{
-  color:#fff ;
+.col-1 p {
+  color: #fff;
 }
-.container{
+.container {
   max-width: 1300px;
   margin: auto;
   padding-left: 20px;
   padding-right: 25px;
 }
 
-.row
-{
+.row {
   display: flex;
   align-items: center;
-   flex-wrap: wrap;
-   justify-content: space-around ;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.col-1{
+.col-1 {
   flex-basis: 100%;
   min-width: 600px;
-  
-  }
-.col-1 img{
+}
+.col-1 img {
   align-items: center;
   max-width: 100%;
-  padding:30px 0;
-  
-  }
-  .col-2{
-    flex-basis: 50%;
-    min-width: 500px;
-    
-    }
-  .col-sm-4 img{
-    align-items: left;
-    max-width: 300px;
-    padding:30px 0;
-    
-    }
-.col-1 h1{
+  padding: 30px 0;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 500px;
+}
+.col-sm-4 img {
+  align-items: left;
+  max-width: 300px;
+  padding: 30px 0;
+}
+.col-1 h1 {
   font-size: 130px;
   line-height: 60px;
   margin: 45px 0;
-  color:rgb(247, 241, 242);
-    
+  color: rgb(247, 241, 242);
 }
-.col-1 h2{
+.col-1 h2 {
   font-size: 40px;
   line-height: 60px;
   margin: 25px 0;
-  color:rgb(231, 58, 58);
-    
+  color: rgb(231, 58, 58);
 }
-.col-1 form input{
+.col-1 form input {
   width: 70%;
   height: 170%;
- line-height: 100%;
- margin-top: 20px;
- margin-bottom: 10px;
- margin-left: 15%;
- padding: 20px 10px;
- color:#fff;
- background-color: #fff;
-
+  line-height: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 15%;
+  padding: 20px 10px;
+  color: #fff;
+  background-color: #fff;
 }
-.col-1 form a{
+.col-1 form a {
   width: 30%;
   height: 180%;
- line-height: 1%;
- margin-bottom: 70px;
- margin-left: 15%;
- padding: 20px 10px;
-}    
+  line-height: 1%;
+  margin-bottom: 70px;
+  margin-left: 15%;
+  padding: 20px 10px;
+}
 
- center .btn
-{
+center .btn {
   display: inline-block;
   background: #fffffe;
   color: rgb(192, 10, 10);
-  padding: 8px  40px;
+  padding: 8px 40px;
   margin: 50px 0;
   border-radius: 30px;
   transition: background 0.5s;
 }
- .btn1
-{
+.btn1 {
   display: inline-block;
   background: #fffffe;
   color: rgb(192, 10, 10);
-  padding: 8px  40px;
+  padding: 8px 40px;
   margin: 50px 0;
   border-radius: 30px;
   transition: background 0.5s;
 }
-.header{
+.header {
   background-image: url("./components/Image/food.jpg");
   filter: brightness(40%);
   background-repeat: no-repeat;
-  
-  }
-  
- .col-1 .btn:hover{
+}
+
+.col-1 .btn:hover {
   background: #563434;
-  }
+}
 
+.cards {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
 
-  .cards {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-  }
-  
-  .cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .containers {
-    padding: 2px 16px;
-  }
-  .offer{
-    background: radial-gradient(rgb(255, 255, 255),#ffd6d6);
-   margin-top: 80px;
-   padding: 30px 0;
-   
-  }
-  
-  .footer{
-    background: #000;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
-  }
-  .footer p{
-    color: #8a8a8a;
-  }
-  .footer h3{
-    color: #fff;
-    margin-bottom:20px;
-  }
-  .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+.cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.containers {
+  padding: 2px 16px;
+}
+.offer {
+  background: radial-gradient(rgb(255, 255, 255), #ffd6d6);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+.footer {
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p {
+  color: #8a8a8a;
+}
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
   min-width: 250px;
   margin-bottom: 20px;
-  }
-  .footer-col-1{
-    flex-basis: 30%;
-  }
-  .footer-col-2{
-    flex: 1;
-    text-align: center;
-  }
-  .footer-col-2 img{
-    width:100px;
-    margin-bottom: 20px;
-  }
-  .footer-col-3,.footer-col-4{
+}
+.footer-col-1 {
+  flex-basis: 30%;
+}
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.footer-col-3,
+.footer-col-4 {
   flex-basis: 12%;
   text-align: center;
-  }
-  /* .footer-col-3,.footer-col-4 ul{
+}
+/* .footer-col-3,.footer-col-4 ul{
     list-style-type: none ;
   } */
-  .app-logo{
-    margin-top: 20px;
-  }
-  .app-logo img{
-    width: 140px;
-  }
-  .footer hr{
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
-  }
-  .copyright{
-    text-align: center;
-    font-size: large;
-  }
-  .menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display:none;
-  }
+.app-logo {
+  margin-top: 20px;
+}
+.app-logo img {
+  width: 140px;
+}
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright {
+  text-align: center;
+  font-size: large;
+}
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
 
-
-
-  .cart-page{
-    margin: 80px auto;
-    
+.cart-page {
+  margin: 80px auto;
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.cart-info{
-    display: flex;
-    flex-wrap: wrap;
-
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
 }
-th{
-    text-align: left;
-    padding: 5px;
-    color: #fff;
-    background: #ff523b;
-     font-weight: normal;
+th {
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background: #ff523b;
+  font-weight: normal;
 }
-td{
-    padding: 10px 5px;
+td {
+  padding: 10px 5px;
 }
-td input{
-    width: 10px;
-    height: 30px;
-    padding: 5px;
+td input {
+  width: 10px;
+  height: 30px;
+  padding: 5px;
 }
-td a{
-    color:#ff523b;
-    font-size: 12px;
+td a {
+  color: #ff523b;
+  font-size: 12px;
 }
-td img{
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
 }
-.total-price{
-    display: flex;
-    justify-content: flex-end;
+.total-price {
+  display: flex;
+  justify-content: flex-end;
 }
-.total-price table{
-    border-top:3px solid #ff523b  ;
-    width: 100%;
-    max-width: 400px;
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px;
 }
-td:last-child{
-    text-align: right;
+td:last-child {
+  text-align: right;
 }
-th:last-child{
-    text-align: right;
+th:last-child {
+  text-align: right;
 }
 /* Search tool */
-.collection-item{
+.collection-item {
   width: 100%;
 }
 
-.desc-card{
+.desc-card {
   max-width: 600px;
-  height:max-content;
+  height: max-content;
   margin: 26px auto;
-
+}
+.button {
+  border: 0;
+  height: 20;
+  padding: 20px;
+}
+.button:hover {
+  background-color: #ff523b;
+  color: white;
 }

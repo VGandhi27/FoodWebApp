@@ -15,23 +15,22 @@
 
 ## <p id="general_info">General Info</p>
 The project's main aim is to develop a web-based application that will make it possible for the customer to order food using this app.
+In this, we are also creating a food recommendation app that will substitute the manual ordering system with an automated one.
 
-In this, we are also creating a food recommendation app that will substitute the manual ordering system  with an automated one.
-
-There is a separate module where each task that was identified as necessary in order to develop the Food Web App or Food Ordering WebApp successfully is presented and described in detail
-- This project aims to create two interfaces that are Customer, Admin
-- User Interface- Used to create an interface where the Customer can place orders, review etc
-- Admin Interface- Used to create an interface where the Admin can add the food products, modify them, delete the food product
-- It also provides good authentication so that the legitimate user can use this app
+There is a separate module where each task that was identified as necessary to develop the Food Web App or Food Ordering WebApp successfully is presented and described in detail:
+- This project aims to create two interfaces: Customer and Admin.
+- User Interface- Used to create an interface where the Customer can place orders, publish reviews, etc.
+- Admin Interface- Used to create an interface where the Admin can add, modify, and delete food products.
+- It also provides good authentication so that the legitimate user can use this app.
 - Backend using MongoDB
 
-At present, only the frontend and Backend of the website have been developed, which consists of the landing page,sign-in and sign-up and profile and cart and product description page.
+At present, only the frontend and Backend of the website have been developed, which consists of the landing, sign-in, sign-up, profile, cart, and product description pages.
 
 ## <p id="features_for_future">Features to implement in future:</p>
 - Recommendation System using Unsupervised Learning
 - Payment Gateway to be established.
 - GPS tracking needs to be done.
-- Google,Facebook authentication 
+- Google and Facebook authentication 
 
 ## <p id="tech">Tech Stack Used:</p>
 **Frontend:**
@@ -53,7 +52,7 @@ At present, only the frontend and Backend of the website have been developed, wh
 
 
 ## <p id="prerequisites">Prerequisite to run the project in your desktop</p>
-It is recommended that your laptop should have the following specifications in order to run this project:
+It is recommended that your laptop should have the following specifications to run this project:
 - NodeJs
 - npm 
 - Visual Studio Code (or any other IDE)

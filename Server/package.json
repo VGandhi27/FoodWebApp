@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "npx nodemon app.js"
@@ -23,5 +22,6 @@
   },
   "devDependencies": {
     "vercel": "^28.8.0"
-  }
+  },
+  "description": ""
 }
